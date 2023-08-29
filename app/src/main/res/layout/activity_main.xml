@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,91 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/txt_title"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/img_phone"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/txt_title"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/samsung"
+        android:importantForAccessibility="no"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txt_phone_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_phone"
+        android:layout_marginTop="8dp"
+        android:text="@string/prod_name"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txt_phone_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_phone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/prod_price"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txt_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_phone_name"
+        android:layout_marginTop="16dp"
+        android:text="@string/prod_desc"
+        />
+    <ImageView
+        android:id="@+id/memory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_desc"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/baseline_smartphone_24"
+        android:importantForAccessibility="no"/>
+    <TextView
+        android:id="@+id/memory_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_desc"
+        android:layout_alignTop="@id/memory"
+        android:layout_toEndOf="@id/memory"
+        android:text="@string/prod_desc_sm"
+        />
+    <ImageView
+        android:id="@+id/img_cam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/memory"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/baseline_camera_24"
+        android:importantForAccessibility="no"/>
+    <TextView
+        android:id="@+id/txt_cam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_cam"
+        android:layout_alignBottom="@+id/img_cam"
+        android:layout_toEndOf="@id/img_cam"
+        android:text="@string/prod_cam"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@drawable/baseline_bookmark_24"
+        android:text="@string/bookmark"
+        tools:ignore="RtlHardcoded"/>
+
+</RelativeLayout>
