@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">android3</string>
+    <string name="prod_name">samsung</string>
+    <string name="prod_price">$699</string>
+    <string name="prod_desc">Version :SM-S9870B/KL</string>
+    <string name="prod_desc_sm">496GB/64GB</string>
+    <string name="prod_cam">100MB</string>
+    <string name="bookmark">BOOKMARK</string>
+</resources>
